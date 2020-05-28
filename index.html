@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel='stylesheet' type='text/css' href='/assets/css/index.css' />
+      <script type='text/javascript' src='assets/js/index.js' ></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Training Assignment</title>
+  </head>
+  <body onload=createStudyList()>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt="logo" width="100px"/></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navigationMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navigationMenu">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="about.html" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i> About Us</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fa fa-envelope" aria-hidden="true"></i> Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class='container-fluid'>
+      <div class='row'>
+        <section class='col-sm-3 leftNav'>
+          <section id='studyList'></section>
+          <div class='bottomButtons'>
+            <button type="button" class="btn btn-primary" onclick="clearRecent()">Reset</button>
+            <button type="button" class="btn btn-primary" onclick=createStudyList()>Reset All</button>
+          </div>
+        </section> 
+
+        <article class='drugSelected col-sm-9'>
+          <div id='drugTitle'></div>
+          <div class='row mainContainer'>
+            <div class='col-sm-6 dropBoxes' id='countriesList'></div>
+            <div class='col-sm-6'>
+              <div class='hospitalsHeading'>Drag the hospitals in their respective countries</div>
+              <div id='hospitalsList' ondrop=drop(event) ondragover=allowDrop(event)></div>
+            </div> 
+          </div>
+        </article>
+      </div>
+    </main>
+    
+    <footer class="footer-copyright text-center">
+      <a href="https://www.3ds.com/" target="_blank"> Dassault Systèmes</a> acquires
+      <a href="https://www.medidata.com/" target="_blank"> Medidata</a><br/>
+      © 2020 Copyright     
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
